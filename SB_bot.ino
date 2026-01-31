@@ -4,7 +4,7 @@
 
 // ตั้งค่าขาให้ TB6612FNG
 const byte IN1 = 4, IN2 = 5, PWMA = 3;  // มอเตอร์ซ้าย
-const byte IN3 = 6, IN4 = 7, PWMB = 11; // มอเตอร์ขว
+const byte IN3 = 6, IN4 = 7, PWMB = 11; // มอเตอร์ขวา
 const byte STBY = 8;
 
 MPU6050 mpu; // set MPU
