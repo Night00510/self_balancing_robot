@@ -1,3 +1,4 @@
 # self_balancing_robot
 # ไฟเลี้ยง CAR
-<img width="1920" height="799" alt="image" src="https://github.com/user-attachments/assets/59f6f9f7-f75c-4886-aee5-d23bf749d807" />
+<img width="1920" height="864" alt="image" src="https://github.com/user-attachments/assets/df518550-4bd2-4f92-abc4-74ef3dbb7f5c" />
+
