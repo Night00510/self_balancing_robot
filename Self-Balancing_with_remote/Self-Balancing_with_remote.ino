@@ -35,7 +35,7 @@ MPU6050 mpu;
 // --- ตัวแปรจัดการค่าจาก MPU6050 ---
 uint16_t packetSize;
 uint8_t fifoBuffer[64];
-Quaternion q;
+Quaternion q;               // ระบบพิกัด quaternions ใช้บอกการหมุน
 VectorFloat gravity;
 float ypr[3];               // [0]=Yaw, [1]=Pitch, [2]=Roll (เราใช้ Pitch ในการทรงตัว)
 
