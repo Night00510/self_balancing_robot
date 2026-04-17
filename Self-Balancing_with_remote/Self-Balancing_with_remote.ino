@@ -24,7 +24,6 @@ MPU6050 mpu;
 PID pid(&input, &PIDoutput, &setpoint, Kp, Ki, Kd, REVERSE);
 
 // --- ตัวแปรจัดการ DMP & Interrupt ---
-uint16_t packetSize;
 uint8_t fifoBuffer[64];
 Quaternion q;
 VectorFloat gravity;
@@ -103,7 +102,6 @@ void setup() {
 
     // --- เปิดการทำงาน Interrupt ที่ขา 2 ---
     attachInterrupt(digitalPinToInterrupt(2), dmpDataReady, RISING);
-    packetSize = mpu.dmpGetFIFOPacketSize();
     
     pid.SetMode(AUTOMATIC);
     pid.SetOutputLimits(-255, 255);
