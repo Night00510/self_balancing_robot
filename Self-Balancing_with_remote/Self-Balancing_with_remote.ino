@@ -17,8 +17,6 @@ const int turnSpeed = 20;
 bool hold_button = false;
 long hold_button_timer = 0;
 
-bool debug = 1;
-
 // --- วัตถุควบคุม ---
 MPU6050 mpu;
 PID pid(&input, &PIDoutput, &setpoint, Kp, Ki, Kd, REVERSE);
@@ -145,15 +143,13 @@ void loop() {
         driveMotors(PIDoutput);
       }
 
-      // 4. Debug
-      if (debug) {
-        static unsigned long lastPrint;
-        if (millis() - lastPrint > 100) {
-          Serial.print("In:"); Serial.print(input);
-          Serial.print(" Out:"); Serial.println(PIDoutput);
-          lastPrint = millis();
-        }
-      }
+    // // 4. Debug
+    //   static unsigned long lastPrint;
+    //   if (millis() - lastPrint > 100) {
+    //     Serial.print("In:"); Serial.print(input);
+    //     Serial.print(" Out:"); Serial.println(PIDoutput);
+    //     lastPrint = millis();
+    //   }
     }
   }
 }
